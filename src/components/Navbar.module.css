@@ -1,0 +1,130 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--background);
+    padding: 20px 0;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logoImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    /* Placeholder color, kept as is for now or use var */
+    box-shadow: var(--shadow-light);
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.links a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.links a:hover {
+    color: var(--accent-red);
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.themeToggle {
+    background: var(--gradient-box);
+    box-shadow: var(--shadow-light);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.themeToggle:hover {
+    color: var(--accent-red);
+    transform: translateY(-2px);
+}
+
+.buyNow {
+    background: var(--gradient-box);
+    box-shadow: var(--shadow-light);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 6px;
+    color: var(--accent-red);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.buyNow:hover {
+    transform: translateY(-2px);
+    background: var(--gradient-red-hover);
+    color: white;
+    box-shadow: var(--shadow-light);
+}
+
+.scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-box);
+    box-shadow: var(--shadow-light);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--accent-red);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.scrollTop:hover {
+    transform: translateY(-5px);
+    background: var(--gradient-red-hover);
+    color: white;
+}

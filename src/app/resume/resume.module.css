@@ -1,0 +1,108 @@
+.resumeContainer {
+    padding: 100px 0;
+    min-height: 100vh;
+    /* background-color: var(--background); - managed globally now */
+    /* color: var(--text-primary); - managed globally */
+}
+
+.contentWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.header {
+    text-align: center;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: var(--accent-red);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.profileSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.imageContainer {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-1);
+    border: 4px solid #363636;
+    /* Could be variable-ized or kept as specific style */
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infoSection {
+    flex: 1;
+    max-width: 600px;
+}
+
+.infoTitle {
+    font-size: 30px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 20px;
+}
+
+.actionButton {
+    background: var(--gradient-box);
+    box-shadow: var(--shadow-light);
+    color: var(--accent-red);
+    padding: 15px 35px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.actionButton:hover {
+    background: var(--gradient-red-hover);
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.hiddenInput {
+    display: none;
+}

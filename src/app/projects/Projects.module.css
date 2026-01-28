@@ -1,0 +1,69 @@
+.projectsSection {
+  padding: 80px 20px;
+  background: transparent;
+  text-align: center;
+}
+
+:global(.dark) .projectsSection {
+  background: #020617;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: inherit;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.projectCard {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+[data-theme='dark'] .projectCard {
+  background: #2c2f36;
+  color: #c4cfde;
+}
+
+:global(.dark) .projectCard {
+  background: #0f172a;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.techStack span {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e5e7eb;
+}
+
+:global(.dark) .techStack span {
+  background: #1e293b;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.links a {
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}

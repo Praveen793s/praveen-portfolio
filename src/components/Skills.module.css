@@ -1,0 +1,64 @@
+.skillsSection {
+  padding: 80px 20px;
+  background: #f7f5f5;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #d8dbe0;
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.skillCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  background: rgb(255, 255, 255);
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #7f8b9c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+/* dark mode card*/
+[data-theme='dark'] .skillCard,.skillsSection {
+  background: #2c2f36;
+  color: #c4cfde;
+}
+
+.icon {
+  font-size: 20px;
+  color: #ff014f;
+  transition: 0.3s;
+}
+:global(.dark) .skillCard {
+  color: #60a5fa;
+}
+
+.skillCard:hover {
+  transform: translateY(-6px) scale(1.05);
+  background: #ff014f;
+  color: white;
+}
+
+.skillCard:hover .icon {
+  color: white;
+}
+@media (max-width: 600px) {
+  .skillsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

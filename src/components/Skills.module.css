@@ -1,64 +1,115 @@
 .skillsSection {
-  padding: 80px 20px;
-  background: #f7f5f5;
+  padding: 100px 0;
+  background-color: var(--background);
+  border-bottom: 1px solid #dce1e4;
+}
+
+[data-theme='dark'] .skillsSection {
+  border-bottom: 1px solid #121415;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
   text-align: center;
+  margin-bottom: 70px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-red);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 60px;
   font-weight: 700;
-  margin-bottom: 40px;
-  color: #d8dbe0;
+  color: var(--text-primary);
+  line-height: 1.2;
 }
 
 .skillsGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 30px;
   justify-content: center;
 }
 
 .skillCard {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 14px 22px;
-  background: rgb(255, 255, 255);
-  border-radius: 30px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #7f8b9c;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px 35px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.4s ease;
   cursor: pointer;
-}
-/* dark mode card*/
-[data-theme='dark'] .skillCard,.skillsSection {
-  background: #2c2f36;
-  color: #c4cfde;
-}
-
-.icon {
-  font-size: 20px;
-  color: #ff014f;
-  transition: 0.3s;
-}
-:global(.dark) .skillCard {
-  color: #60a5fa;
+  min-width: 160px;
 }
 
 .skillCard:hover {
-  transform: translateY(-6px) scale(1.05);
-  background: #ff014f;
-  color: white;
+  transform: translateY(-10px);
+  background: var(--gradient-box);
+}
+
+.icon {
+  font-size: 40px;
+  color: var(--text-primary);
+  transition: all 0.4s ease;
 }
 
 .skillCard:hover .icon {
-  color: white;
+  color: var(--accent-red);
+  transform: scale(1.1);
 }
-@media (max-width: 600px) {
+
+.skillName {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.4s ease;
+}
+
+.skillCard:hover .skillName {
+  color: var(--accent-red);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+
   .skillsGrid {
-    flex-direction: column;
-    align-items: center;
+    gap: 20px;
+  }
+
+  .skillCard {
+    min-width: 140px;
+    padding: 20px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsGrid {
+    flex-direction: row;
+    /* Keep grid layout */
+  }
+
+  .skillCard {
+    width: 45%;
+    min-width: auto;
   }
 }

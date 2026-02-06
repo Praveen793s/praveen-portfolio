@@ -55,13 +55,24 @@
     height: 100%;
 }
 
-.imagePlaceholder {
+.imageContainer {
     width: 100%;
     height: 250px;
-    background-color: #ddd;
-    /* Keep placeholder or change if needed */
+    background-color: var(--background);
     border-radius: 10px;
     margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.contactImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .contactImage {
+    transform: scale(1.1);
 }
 
 .name {

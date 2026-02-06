@@ -39,15 +39,20 @@ const skills = [
 export default function Skills() {
   return (
     <section className={styles.skillsSection} id="skills">
-      <h2 className={styles.title}>My Skills</h2>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.subtitle}>FEATURES</span>
+          <h2 className={styles.title}>My Skills</h2>
+        </div>
 
-      <div className={styles.skillsGrid}>
-        {skills.map((skill, index) => (
-          <div key={index} className={styles.skillCard}>
-            <span className={styles.icon}>{skill.icon}</span>
-            <span>{skill.name}</span>
-          </div>
-        ))}
+        <div className={styles.skillsGrid}>
+          {skills.map((skill, index) => (
+            <div key={index} className={styles.skillCard}>
+              <span className={styles.icon}>{skill.icon}</span>
+              <span className={styles.skillName}>{skill.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

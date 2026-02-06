@@ -22,7 +22,7 @@ const Resume = () => {
         <section className={styles.resumeContainer}>
             <div className={styles.contentWrapper}>
                 <div className={styles.header}>
-                    <p className={styles.subtitle}>7+ YEARS OF EXPERIENCE</p>
+                    <p className={styles.subtitle}>5+ YEARS OF EXPERIENCE</p>
                     <h1 className={styles.title}>My Resume</h1>
                 </div>
 

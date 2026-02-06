@@ -1,0 +1,154 @@
+.certificate {
+    padding: 100px 0;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-red);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    box-shadow: var(--shadow-light);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: var(--gradient-box);
+}
+
+.imageContainer {
+    width: 100%;
+    height: 240px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: var(--input-shadow);
+}
+
+.certificateImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .certificateImage {
+    transform: scale(1.1);
+}
+
+.content {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificateTitle {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.card:hover .certificateTitle {
+    color: var(--accent-red);
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.buttonContainer {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.viewBtn {
+    color: var(--accent-red);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.viewBtn:hover {
+    gap: 10px;
+}
+
+/* Dark mode specific adjustments if needed, though vars handle most */
+[data-theme='dark'] .imageContainer {
+    background-color: #1e2125;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .certificate {
+        padding: 60px 0;
+    }
+}

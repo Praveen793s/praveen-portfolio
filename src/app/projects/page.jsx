@@ -24,8 +24,8 @@ const projects = [
     description:
       "A website showcasing 3D graphics using Three.js integrated with React.",
     tech: ["React", "Three.js", "CSS", "GSAP"],
-    live: <a href='https://threejs-project-eosin.vercel.app'>Live Demo</a>,
-    github: <a href='https://github.com/Praveen793s'>GitHub</a>,
+    live: "https://threejs-project-eosin.vercel.app",
+    github: "https://github.com/Praveen793s",
   }
 ];
 
@@ -47,8 +47,24 @@ export default function Projects() {
             </div>
 
             <div className={styles.links}>
-              <a href={project.live} target="_blank">Live</a>
-              <a href={project.github} target="_blank">Code</a>
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo
+                </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              )}
             </div>
           </div>
         ))}

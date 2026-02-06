@@ -30,6 +30,7 @@
   text-align: left;
   transition: 0.3s ease;
 }
+
 [data-theme='dark'] .projectCard {
   background: #2c2f36;
   color: #c4cfde;
@@ -51,10 +52,13 @@
   padding: 6px 12px;
   border-radius: 20px;
   background: #e5e7eb;
+  font-weight: bold;
+  color: #1f2937;
 }
 
 :global(.dark) .techStack span {
   background: #1e293b;
+  color: #f3f4f6;
 }
 
 .links {
@@ -66,4 +70,23 @@
   font-weight: 600;
   color: #2563eb;
   text-decoration: none;
+  border: 1px solid #2563eb;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.links a:hover {
+  background: #2563eb;
+  color: white;
+}
+
+:global(.dark) .links a {
+  color: #60a5fa;
+  border-color: #60a5fa;
+}
+
+:global(.dark) .links a:hover {
+  background: #60a5fa;
+  color: #0f172a;
 }

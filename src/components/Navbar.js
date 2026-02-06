@@ -1,4 +1,4 @@
-"use client";   
+"use client";
 import Link from 'next/link';
 import { useTheme } from '@/context/ThemeContext';
 import styles from './Navbar.module.css';
@@ -33,15 +33,16 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <div className={styles.logoImage}></div> {/* Placeholder for logo */}
-                    <span>INBIO</span>
+                    <div className={styles.logoImage}>
+                        <span className={styles.logoInitial}>P</span>
+                    </div>
+                    <span className={styles.logoText}>PRAVEEN</span>
                 </div>
                 <div className={styles.links}>
                     <Link href="/">HOME</Link>
                     <Link href="/projects">PROJECTS</Link>
                     <Link href="/resume">RESUME</Link>
-                    <Link href="/#clients">CLIENTS</Link>
-                    <Link href="/#pricing">PRICING</Link>
+                    <Link href="/certificate">CERTIFICATES</Link>
                     <Link href="/#blog">BLOG</Link>
                     <Link href="/#contact">CONTACT</Link>
                 </div>

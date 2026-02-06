@@ -1,11 +1,32 @@
+import Image from 'next/image';
 import styles from './Blog.module.css';
+import { isHmrRefresh } from 'next/dist/server/app-render/work-unit-async-storage.external';
 
 const Blog = () => {
     // Placeholder data for blog posts
     const blogPosts = [
-        { id: 1, title: 'Development Best Practices', category: 'Development', date: 'Jan 20, 2024' },
-        { id: 2, title: 'The Future of AI in Tech', category: 'Technology', date: 'Jan 18, 2024' },
-        { id: 3, title: 'UI/UX Design Fundamentals', category: 'Design', date: 'Jan 15, 2024' }
+        {
+            id: 1,
+            title: 'Development Best Practices',
+            category: 'Development',
+            date: 'Jan 20, 2024',
+            image: '/blog/blog-1.png'
+        },
+        {
+            id: 2,
+            title: 'The Future of AI in Tech',
+            category: 'Technology',
+            date: 'Jan 18, 2024',
+            image: '/blog/blog-2.png'
+        },
+        {
+            id: 3,
+            title: 'UI/UX Design Fundamentals',
+            category: 'Design',
+            date: 'Jan 15, 2024',
+            image: '/blog/blog-3.png'
+        }
+        
     ];
 
     return (
@@ -19,7 +40,15 @@ const Blog = () => {
                 <div className={styles.grid}>
                     {blogPosts.map(post => (
                         <div key={post.id} className={styles.card}>
-                            <div className={styles.imagePlaceholder}></div>
+                            <div className={styles.imageContainer}>
+                                <Image
+                                    src={post.image}
+                                    alt={post.title}
+                                    width={400}
+                                    height={250}
+                                    className={styles.blogImage}
+                                />
+                            </div>
                             <div className={styles.content}>
                                 <div className={styles.meta}>
                                     <span className={styles.category}>{post.category}</span>

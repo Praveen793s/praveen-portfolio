@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Contact.module.css';
 
 const Contact = () => {
@@ -12,7 +13,15 @@ const Contact = () => {
                 <div className={styles.content}>
                     <div className={styles.left}>
                         <div className={styles.card}>
-                            <div className={styles.imagePlaceholder}></div>
+                            <div className={styles.imageContainer}>
+                                <Image
+                                    src="/contact-handshake.png"
+                                    alt="Contact"
+                                    width={400}
+                                    height={280}
+                                    className={styles.contactImage}
+                                />
+                            </div>
                             <h3 className={styles.name}>Praveen</h3>
                             <p className={styles.role}>Chief Operating Officer</p>
                             <p className={styles.desc}>I am available for freelance work. Connect with me via and call in to my account.</p>

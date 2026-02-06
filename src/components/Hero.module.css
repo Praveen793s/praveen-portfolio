@@ -111,7 +111,7 @@
 
 .imageContainer {
     width: 100%;
-    height: 500px;
+    height: 400px;
     background: var(--gradient-box);
     box-shadow: var(--shadow-1);
     border-radius: 10px;
@@ -121,7 +121,22 @@
     /* Align image to bottom if needed */
     justify-content: center;
     overflow: hidden;
-    padding: 20px;
+}
+
+.heroImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;      
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.imageContainer:hover .heroImage {
+    transform: scale(1.1);
 }
 
 /* Responsive */
@@ -156,5 +171,9 @@
     .title,
     .role {
         font-size: 40px;
+    }
+
+    .imageContainer {
+        height: 500px;
     }
 }

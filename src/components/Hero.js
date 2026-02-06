@@ -43,7 +43,13 @@ const Hero = () => {
                     <div className={styles.imageContainer}>
                         {/* Use the placeholder logic or real image if available later */}
                         <div className={styles.imagePlaceholder}>
-                            <Image src="/profile.jpg" alt="Praveen" width={500} height={500} />
+                            <Image
+                                src="/pp.jpg"
+                                alt="Praveen"
+                                width={500}
+                                height={500}
+                                className={styles.heroImage}
+                            />
                         </div>
                     </div>
                 </div>

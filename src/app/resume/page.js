@@ -48,7 +48,7 @@ const Resume = () => {
 
                         <div className={styles.buttonGroup}>
                             {/* Download Button */}
-                            <a href="/Praveen_Full_Stack_Developer.pdf.pdf.pdf" download className={styles.actionButton}>
+                            <a href="/Praveen-phulwar (1).pdf" download className={styles.actionButton}>
                                 Download Resume
                             </a>
 

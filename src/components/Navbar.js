@@ -2,12 +2,13 @@
 import Link from 'next/link';
 import { useTheme } from '@/context/ThemeContext';
 import styles from './Navbar.module.css';
-import { FiSun, FiMoon } from 'react-icons/fi';
+import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 
 const Navbar = () => {
     const { theme, toggleTheme } = useTheme();
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,6 +22,14 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+    }
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -38,19 +47,29 @@ const Navbar = () => {
                     </div>
                     <span className={styles.logoText}>PRAVEEN</span>
                 </div>
-                <div className={styles.links}>
-                    <Link href="/">HOME</Link>
-                    <Link href="/projects">PROJECTS</Link>
-                    <Link href="/resume">RESUME</Link>
-                    <Link href="/certificate">CERTIFICATES</Link>
-                    <Link href="/#blog">BLOG</Link>
-                    <Link href="/#contact">CONTACT</Link>
+
+                <div className={`${styles.links} ${menuOpen ? styles.active : ''}`}>
+                    <Link href="/" onClick={closeMenu}>HOME</Link>
+                    <Link href="/projects" onClick={closeMenu}>PROJECTS</Link>
+                    <Link href="/resume" onClick={closeMenu}>RESUME</Link>
+                    <Link href="/certificate" onClick={closeMenu}>CERTIFICATES</Link>
+                    <Link href="/#blog" onClick={closeMenu}>BLOG</Link>
+                    <Link href="/#contact" onClick={closeMenu}>CONTACT</Link>
+
+                    {/* Mobile Theme Toggle inside menu for better UX on small screens if needed, 
+                        but keeping it in CTA for now as per design preference usually. 
+                        Let's keep CTA separate but maybe hide it or adjust in CSS. 
+                     */}
                 </div>
+
                 <div className={styles.cta}>
                     <button className={styles.themeToggle} onClick={toggleTheme}>
                         {theme === 'light' ? <FiMoon /> : <FiSun />}
                     </button>
-                    <button className={styles.buyNow}>BUY NOW</button>
+                    {  /* <button className={styles.buyNow}>BUY NOW</button> */}
+                    <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
+                        {menuOpen ? <FiX /> : <FiMenu />}
+                    </button>
                 </div>
             </div>
 

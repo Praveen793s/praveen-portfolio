@@ -23,10 +23,10 @@ const Contact = () => {
                                 />
                             </div>
                             <h3 className={styles.name}>Praveen</h3>
-                            <p className={styles.role}>Chief Operating Officer</p>
+                            <p className={styles.role}>web developer(MERN Stack) </p>
                             <p className={styles.desc}>I am available for freelance work. Connect with me via and call in to my account.</p>
                             <div className={styles.contactInfo}>
-                                <p>Phone: <span>+91 7697155654</span></p>
+                                <p>Phone: <span>+91 7697185654</span></p>
                                 <p>Email: <span>praveenphulwar@gmail.com</span></p>
                             </div>
                         </div>

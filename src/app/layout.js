@@ -11,7 +11,12 @@ export default function RootLayout({ children }) {
  
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <title>Praveen Phulwar</title>
+        <meta name="description" content="Praveen Phulwar" />
+        <meta name="keywords" content="Praveen Phulwar" />
+        <meta name="author" content="Praveen Phulwar" />  
+      </head>
       <body>
         <ThemeProvider>
           <main>

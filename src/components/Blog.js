@@ -34,7 +34,7 @@ const Blog = () => {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <span className={styles.subtitle}>VISIT MY BLOG AND KEEP YOUR FEEDBACK</span>
-                    <h2 className={styles.title}>My Blog</h2>
+                    <h2 className={styles.title}>Blog</h2>
                 </div>
 
                 <div className={styles.grid}>

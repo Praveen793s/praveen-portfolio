@@ -7,7 +7,7 @@ const Pricing = () => {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <span className={styles.subtitle}>PRICING</span>
-                    <h2 className={styles.title}>My Pricing</h2>
+                    <h2 className={styles.title}>Pricing</h2>
                 </div>
 
                 <div className={styles.grid}>

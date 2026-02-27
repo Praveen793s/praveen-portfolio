@@ -42,7 +42,7 @@ export default function Skills() {
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.subtitle}>FEATURES</span>
-          <h2 className={styles.title}>My Skills</h2>
+          <h2 className={styles.title}>Skills</h2>
         </div>
 
         <div className={styles.skillsGrid}>

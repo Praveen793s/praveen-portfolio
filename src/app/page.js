@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 import Hero from "@/components/Hero";
 //import Clients from "@/components/Clients";
-import Pricing from "@/components/Pricing";
-import Blog from "@/components/Blog";
+//import Pricing from "@/components/Pricing";
+//import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skill";
 import Projects from "./projects/page";
@@ -14,8 +14,6 @@ export default function Home() {
     <main className={styles.main}>
       <Hero />
       <Projects />
-      <Pricing />
-      <Blog />
       <Skills />
       <Contact />
     </main>

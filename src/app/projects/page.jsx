@@ -33,6 +33,7 @@ export default function Projects() {
   return (
     <section className={styles.projectsSection} id="projects">
       <h2 className={styles.title}>Projects</h2>
+      <div className={styles.titleUnderline}></div>
 
       <div className={styles.projectsGrid}>
         {projects.map((project, index) => (

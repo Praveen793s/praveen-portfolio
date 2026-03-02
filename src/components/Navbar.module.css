@@ -110,6 +110,56 @@
     transform: translateY(-2px);
 }
 
+/* Music Toggle Button */
+.musicToggle {
+    background: var(--gradient-box);
+    box-shadow: var(--shadow-light);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    gap: 1px;
+    position: relative;
+}
+
+.musicToggle:hover {
+    color: var(--accent-red);
+    transform: translateY(-2px);
+}
+
+.musicLabel {
+    font-size: 0.45rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.musicPlaying {
+    color: var(--accent-red);
+    box-shadow: 0 0 12px rgba(220, 38, 38, 0.5), var(--shadow-light);
+    animation: musicPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 8px rgba(220, 38, 38, 0.4), var(--shadow-light);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.8), var(--shadow-light);
+    }
+}
+
 .buyNow {
     background: var(--gradient-box);
     box-shadow: var(--shadow-light);

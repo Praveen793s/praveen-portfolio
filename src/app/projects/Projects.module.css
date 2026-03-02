@@ -1,92 +1,167 @@
+/* ===== Projects Section ===== */
 .projectsSection {
   padding: 80px 20px;
-  background: transparent;
+  background: var(--background);
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-:global(.dark) .projectsSection {
-  background: #020617;
-}
-
+/* ===== Section Title ===== */
 .title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: inherit;
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
+.titleUnderline {
+  width: 60px;
+  height: 4px;
+  background: var(--accent-red);
+  border-radius: 4px;
+  margin: 0 auto 40px;
+}
+
+/* ===== Grid ===== */
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px;
 }
 
+/* ===== Card ===== */
 .projectCard {
-  background: #ffffff;
-  padding: 25px;
+  background: var(--gradient-box);
+  box-shadow: var(--shadow-light);
+  padding: 28px 24px;
   border-radius: 18px;
   text-align: left;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--border-color);
 }
 
-[data-theme='dark'] .projectCard {
-  background: #2c2f36;
-  color: #c4cfde;
+.projectCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-light), 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-:global(.dark) .projectCard {
-  background: #0f172a;
+/* ===== Card Title ===== */
+.projectCard h3 {
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  transition: color 0.3s ease;
 }
 
+/* ===== Card Description ===== */
+.projectCard p {
+  font-size: clamp(0.85rem, 2.5vw, 0.93rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+
+/* ===== Tech Stack badges ===== */
 .techStack {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 15px 0;
 }
 
 .techStack span {
-  font-size: 12px;
-  padding: 6px 12px;
+  font-size: 11px;
+  padding: 5px 13px;
   border-radius: 20px;
-  background: #e5e7eb;
-  font-weight: bold;
-  color: #1f2937;
+  background: var(--card-bg);
+  box-shadow: var(--shadow-light);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-:global(.dark) .techStack span {
-  background: #1e293b;
-  color: #f3f4f6;
-}
-
+/* ===== Links (CTA buttons) ===== */
 .links {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
 }
 
 .links a {
   font-weight: 600;
-  color: #2563eb;
+  font-size: clamp(0.78rem, 2.5vw, 0.85rem);
+  color: var(--accent-red);
   text-decoration: none;
-  border: 1px solid #2563eb;
-  padding: 8px 16px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  border: 1.5px solid var(--accent-red);
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 100px;
+  background: transparent;
 }
 
 .links a:hover {
-  background: #2563eb;
-  color: white;
+  background: var(--gradient-red-hover);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 1, 79, 0.35);
 }
 
-:global(.dark) .links a {
-  color: #60a5fa;
-  border-color: #60a5fa;
+/* ===== Responsive: Tablet (≤768px) ===== */
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 60px 16px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 4px;
+  }
+
+  .projectCard {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
 }
 
-:global(.dark) .links a:hover {
-  background: #60a5fa;
-  color: #0f172a;
+/* ===== Responsive: Mobile (≤480px) ===== */
+@media (max-width: 480px) {
+  .projectsSection {
+    padding: 48px 12px;
+  }
+
+  .projectCard {
+    padding: 18px 14px;
+    border-radius: 12px;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .links a {
+    flex: unset;
+    width: 100%;
+    text-align: center;
+  }
 }
